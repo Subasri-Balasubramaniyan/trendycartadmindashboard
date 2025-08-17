@@ -77,12 +77,7 @@ npm install
 3. Start the development server
 npm start
 
-
-The app will run at http://localhost:3000
-
 4. Backend Setup
-
-Ensure your backend server is running on http://localhost:5005 (or the port set in .env).
 
 🔑 Admin Login Credentials (Seeded)
 Email: admin@trendycart.com
