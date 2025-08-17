@@ -1,0 +1,123 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-listing-container {
+  padding: 30px;
+  max-width: 1300px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 30px 0;
+  animation: slideIn 0.6s ease forwards;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 14px 16px 14px 50px; /* increased left padding for more gap */
+  font-size: 17px;
+  width: 320px; /* increased width */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-icon {
+  position: absolute;
+  left: 18px; /* optional: adjust for better spacing */
+  color: #555;
+  font-size: 18px;
+}
+
+
+.filter-dropdown {
+  padding: 14px 16px 14px 40px;
+  font-size: 17px;
+  min-width: 220px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  appearance: none;
+}
+
+.filter-dropdown:hover {
+  border-color: #b00087;
+  box-shadow: 0 6px 12px rgba(176, 0, 135, 0.2);
+}
+
+
+.search-bar input:hover {
+  border-color: #b00087;
+  box-shadow: 0 6px 12px rgba(176, 0, 135, 0.2);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+.view-cart-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 20px 0 0;
+  margin-left: 130px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 20px;
+}
+
+.view-cart-btn:hover {
+  background-color: #c2185b;
+}
+
+/* Override or extend search icon spacing and input padding */
+.search-bar.input-wrapper .input-icon {
+  left: 20px; /* Slightly increase spacing from left */
+}
+
+.search-bar.input-wrapper input {
+  padding-left: 55px; /* Increase padding to push text away from icon */
+}

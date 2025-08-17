@@ -1,0 +1,119 @@
+/* SignupPage.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff; /* White background */
+}
+
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white; /* Page stays white */
+  padding: 20px;
+}
+
+.signup-form-glass {
+  background: linear-gradient(to right, #f48fb1, #ec407a); /* Pink gradient */
+  border-radius: 16px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 480px;
+  max-width: 95%;
+  color: white;
+  position: relative;
+}
+
+.signup-logo {
+  display: block;
+  margin: 0 auto 20px;
+  height: 60px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.signup-btn {
+  padding: 12px 20px;
+  background: white;
+  color: #ec407a;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.signup-btn:hover {
+  box-shadow: 0 0 12px #ffffff, 0 0 20px #ffffff;
+  animation: glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 8px #ffffff;
+  }
+  to {
+    box-shadow: 0 0 20px #ffffff;
+  }
+}
+
+.switch-login {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.switch-login a {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}

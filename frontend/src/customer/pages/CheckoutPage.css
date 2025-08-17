@@ -1,0 +1,139 @@
+/* checkout-page.css */
+
+.checkout-page {
+  padding: 30px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  animation: fadeInUp 1s ease-in-out;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Fade-in + float animation for overall container */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkout-section {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.checkout-section h3 {
+  color: #B00087;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Simple fade-in for list */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: itemFadeIn 0.8s ease forwards;
+}
+
+/* Staggered animation for multiple items */
+.checkout-item:nth-child(1) { animation-delay: 0.2s; }
+.checkout-item:nth-child(2) { animation-delay: 0.4s; }
+.checkout-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes itemFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.address-form input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  flex: 1;
+  transition: border-color 0.3s ease;
+}
+
+.address-form input:focus {
+  outline: none;
+  border-color: #B00087;
+}
+
+.payment-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.payment-options input[type="radio"] {
+  accent-color: #B00087;
+}
+
+.place-order-btn {
+  background-color: #B00087;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1.2s ease-in-out;
+  min-width: 200px;
+}
+
+.place-order-btn:hover:not(:disabled) {
+  background-color: #8a006b;
+  transform: scale(1.05);
+}
+
+.place-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

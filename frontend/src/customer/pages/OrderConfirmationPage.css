@@ -1,0 +1,113 @@
+/* src/pages/OrderConfirmationPage.css */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  margin: 0;
+  padding: 0;
+}
+
+.order-confirmation {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.order-confirmation h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #B00087;
+}
+
+.order-confirmation .subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: 0.3s ease;
+  color: #000;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #B00087;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-msg {
+  color: #d8000c;
+  background: #ffdddd;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.confirm-btn {
+  background-color: #ff4081;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 14px rgba(255, 64, 129, 0.4);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.confirm-btn:hover {
+  background-color: #e91e63;
+  transform: scale(1.03);
+}

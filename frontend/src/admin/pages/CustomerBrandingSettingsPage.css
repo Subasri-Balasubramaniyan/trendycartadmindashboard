@@ -1,0 +1,135 @@
+/* src/pages/CustomerBrandingSettingsPage.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+  margin: 0;
+  padding: 0;
+}
+
+.branding-settings-card {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.branding-settings-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #222;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00aacc;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.file-name {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #666;
+}
+
+.color-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-picker input[type="color"] {
+  border: none;
+  width: 50px;
+  height: 40px;
+  background: none;
+  cursor: pointer;
+}
+
+.color-code {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  font-family: monospace;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.save-btn,
+.clear-btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background-color: #B00087;
+  color: white;
+}
+
+.clear-btn {
+  background-color: purple;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color:palevioletred;
+}
+
+.clear-btn:hover {
+  background-color: violet;
+}

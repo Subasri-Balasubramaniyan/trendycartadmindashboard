@@ -1,0 +1,141 @@
+/* Fade-in for the whole dashboard */
+.admin-dashboard {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  animation: fadeIn 1s ease-in-out both;
+}
+
+/* Dashboard Title */
+.admin-dashboard-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Stat Cards with enhanced glassmorphism */
+.stat-card {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideUp 1s ease both, floatY 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Stat Icon Colors */
+.stat-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.stat-icon.green {
+  color: #2ecc71;
+}
+
+.stat-icon.blue {
+  color: #3498db;
+}
+
+.stat-icon.gray {
+  color: #7f8c8d;
+}
+
+/* Manage Section */
+.manage-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+
+/* Grid of cards */
+.manage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+/* Each management card with advanced glass effect */
+.manage-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideUp 1s ease both, floatY 8s ease-in-out infinite;
+}
+
+.manage-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons in manage cards */
+.manage-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  color: #b00087;
+  transition: transform 0.3s ease;
+}
+
+.manage-card:hover .manage-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

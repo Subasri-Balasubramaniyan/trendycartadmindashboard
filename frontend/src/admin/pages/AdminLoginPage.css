@@ -1,0 +1,167 @@
+/* AdminLoginPage.css */
+
+.admin-login-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
+
+.admin-banner {
+  flex: 0.65; /* reduced from 0.7 */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.admin-banner img {
+  width: 120%;
+  height: 100%; /* changed from 90% to 100% */
+  object-fit: cover;
+  transition: transform 1.5s ease;
+  border-radius: 0 0 10px 0;
+}
+.admin-login-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* animated border */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-size: 16px;
+  transition: 
+    background 0.3s ease, 
+    border-color 0.3s ease, 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: fadeInInput 1s ease forwards;
+  opacity: 0;
+}
+
+/* On focus */
+.admin-login-form input:focus {
+  background: rgba(255, 255, 255, 0.6);
+  outline: none;
+  border-color: #b00087;
+  box-shadow: 0 0 8px rgba(176, 0, 135, 0.5);
+  transform: scale(1.02);
+}
+@keyframes fadeInInput {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animate-banner img {
+  transform: scale(1.05);
+}
+
+.admin-login-form {
+  flex: 0.35;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1.2s ease forwards;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 0;
+}
+
+.admin-logo {
+  width: 200px; /* increased size from 80px */
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 1s ease;
+  height: 300px;
+}
+
+.animate-logo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.admin-login-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  color: #b00087;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.admin-login-form input::placeholder {
+  color: #333;
+}
+
+.admin-login-form input:focus {
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+.admin-login-form button {
+  margin-top: 1.2rem;
+  padding: 12px 20px;
+  background-color: #b00087;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.admin-login-form button:hover {
+  background-color: purple;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

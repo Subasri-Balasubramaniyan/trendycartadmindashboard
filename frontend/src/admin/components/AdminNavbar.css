@@ -1,0 +1,179 @@
+/* AdminNavbar.css — enhanced with sticky behavior and glassmorphism */
+
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ec407a, #b00087);
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 60px;
+  user-select: none;
+  animation: fadeInNavbar 1.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(176, 0, 135, 0.3);
+  backdrop-filter: blur(10px); /* subtle glass effect on navbar */
+}
+
+@keyframes fadeInNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-logo {
+  height: 40px;
+  object-fit: contain;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.admin-title {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  animation: fadeInText 1.4s ease;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-icon-wrapper {
+  position: relative;
+}
+
+.menu-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 30px;
+  animation: fadeInMenuBtn 1.2s ease;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+@keyframes fadeInMenuBtn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  z-index: 1000;
+  animation: dropdownPop 0.35s ease;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes dropdownPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.dropdown-menu a {
+  color: #222;
+  padding: 14px 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(236, 64, 122, 0.6);
+  color: white;
+  transform: translateX(5px);
+}
+
+.dropdown-menu a.active {
+  background-color: #d81b60;
+  color: white;
+  font-weight: 700;
+  transform: scale(1.02);
+}
+
+.dropdown-menu .logout-button {
+  color: #222;
+  padding: 14px 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.dropdown-menu .logout-button:hover {
+  background-color: rgba(236, 64, 122, 0.6);
+  color: white;
+  transform: translateX(5px);
+}

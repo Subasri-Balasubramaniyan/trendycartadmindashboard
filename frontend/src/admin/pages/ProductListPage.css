@@ -1,0 +1,104 @@
+.admin-product-list {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.admin-product-list h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #B00087;
+}
+
+.btn-add {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  background-color: #B00087;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #8a006b;
+}
+
+.admin-product-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.admin-product-list th,
+.admin-product-list td {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.admin-product-list th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.admin-product-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+.admin-product-list td a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.admin-product-list td a:hover {
+  text-decoration: underline;
+}
+
+.admin-product-list button {
+  padding: 6px 12px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.admin-product-list button:hover {
+  background-color: #d93636;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #eee;
+  border: none;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination button.active {
+  background-color: #B00087;
+  color: white;
+  font-weight: bold;
+}

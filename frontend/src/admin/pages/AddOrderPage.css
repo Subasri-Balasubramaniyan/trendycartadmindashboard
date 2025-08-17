@@ -1,0 +1,52 @@
+/* src/admin/pages/AddOrderPage.css */
+
+.add-order-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-order-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-order-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-order-container input,
+.add-order-container select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.add-order-container input:focus,
+.add-order-container select:focus {
+  border-color: #b00087;
+  outline: none;
+}
+
+.add-order-container button {
+  padding: 12px;
+  background-color: #b00087;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-order-container button:hover {
+  background-color: #900063;
+}
